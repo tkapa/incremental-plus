@@ -9,3 +9,6 @@ func _ready():
 func _on_add_points(added: int):
 	points += added
 	Signalbus.points_added.emit(points)
+
+func current_points() -> int:
+	return points;

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://crmwqqe86kjnw"]
+
+[ext_resource type="Script" uid="uid://cc34d36477p4m" path="res://Components/BuyButton/buy_button.gd" id="1_7ghck"]
+
+[node name="BuyAssetButton" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_7ghck")
+metadata/_custom_type_script = "uid://cc34d36477p4m"
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]

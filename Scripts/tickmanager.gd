@@ -1,6 +1,6 @@
 extends Node
 
-const DEFAULT_TICK_TIME : float = 2
+const DEFAULT_TICK_TIME : float = 1
 
 var tick_timer : Timer = Timer.new()
 
@@ -14,5 +14,4 @@ func _set_up_timer():
 	tick_timer.start(DEFAULT_TICK_TIME)
 
 func _on_tick_timeout():
-	print_debug("TICK...")
 	Signalbus.tick_timeout.emit()

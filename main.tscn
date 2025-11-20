@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bde2bg7xyd71g"]
+[gd_scene load_steps=4 format=3 uid="uid://bde2bg7xyd71g"]
 
 [ext_resource type="PackedScene" uid="uid://co2b0vhcguuvq" path="res://points_label.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://ywbcxqwcdggo" path="res://basic_button.gd" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://crmwqqe86kjnw" path="res://Components/BuyButton/BuyAssetButton.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node"]
 
@@ -31,9 +32,12 @@ theme_override_constants/separation = 10
 [node name="PointsLabel" parent="Panel/MarginContainer/VBoxContainer" instance=ExtResource("1_ig7tw")]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
+[node name="AddPointButton" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Add Points"
 script = ExtResource("2_0xm2m")
 
-[connection signal="button_down" from="Panel/MarginContainer/VBoxContainer/Button" to="Panel/MarginContainer/VBoxContainer/Button" method="_on_button_down"]
+[node name="BuyAssetButton" parent="Panel/MarginContainer/VBoxContainer" instance=ExtResource("3_h2yge")]
+layout_mode = 2
+
+[connection signal="button_down" from="Panel/MarginContainer/VBoxContainer/AddPointButton" to="Panel/MarginContainer/VBoxContainer/AddPointButton" method="_on_button_down"]
