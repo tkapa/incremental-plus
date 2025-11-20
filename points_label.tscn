@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://co2b0vhcguuvq"]
+
+[ext_resource type="Script" uid="uid://dbm8yummodyqa" path="res://points_label.gd" id="1_thuy6"]
+
+[node name="PointsLabel" type="HBoxContainer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_right = 5.0
+offset_bottom = 23.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 10
+script = ExtResource("1_thuy6")
+
+[node name="Points" type="Label" parent="."]
+layout_mode = 2
+text = "Points:"
+
+[node name="PointsTotal" type="Label" parent="."]
+layout_mode = 2
+text = "0"

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cycsdwiyolye8"]
+
+[ext_resource type="Script" uid="uid://kxs8g7s1842q" path="res://Components/TickListener/tick_listener.gd" id="1_73aqx"]
+
+[node name="TickListenerComponent" type="Node"]
+script = ExtResource("1_73aqx")
