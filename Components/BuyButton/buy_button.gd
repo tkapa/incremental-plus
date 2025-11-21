@@ -1,15 +1,33 @@
 class_name BuyButton extends Button
 
-@export var asset := 1;
+@export var puchasable : Purchasable
 
-@export var BASE_ASSET_COST := 10
-@export var asset_cost_multiplier := 1.1
+var current_asset_cost : int
 
-var current_asset_cost := BASE_ASSET_COST
+func _ready():
+	Signalbus.points_added.connect(_on_points_changed)
+	current_asset_cost = puchasable.base_cost
+	text = "Buy " + puchasable.name 
+	
+	if (!_is_purchasable()):
+		disabled = true
 
 func _on_button_down():
-	if (!_calculate_valid_purchase()):
+	if (!_is_purchasable()):
 		return;
+	
+	_handle_purchase()
 
-func _calculate_valid_purchase() -> bool:
-	return Gamemanager.current_points() > current_asset_cost;
+func _is_purchasable() -> bool:
+	return Gamemanager.current_points() >= current_asset_cost;
+
+func _on_points_changed(new_value: int): 
+	if (!_is_purchasable()):
+		disabled = true
+		return
+	
+	disabled = false
+
+func _handle_purchase():
+	Signalbus.handle_purchase.emit(puchasable, current_asset_cost)
+	current_asset_cost *= puchasable.cost_increment
