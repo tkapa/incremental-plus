@@ -7,9 +7,7 @@ func _ready():
 
 func _on_handle_purchase(purchasable: Purchasable, cost: int):
 	Signalbus.add_points.emit(-cost)
-	
 	var type = purchasable.get_type()
-	print_debug("Buying: " + purchasable.name)
 	
 	if (purchasable.get_type() == Purchasable.PurchasableType.PASSIVE): 
 		var node = PASSIVE_SCENE_RES.instantiate()

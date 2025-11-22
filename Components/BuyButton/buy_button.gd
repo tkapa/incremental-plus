@@ -25,7 +25,6 @@ func _on_points_changed(new_value: int):
 	if (!_is_purchasable()):
 		disabled = true
 		return
-	
 	disabled = false
 
 func _handle_purchase():
