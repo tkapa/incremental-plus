@@ -17,9 +17,10 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Signalbus="*res://Scripts/signalbus.gd"
-Tickmanager="*res://Scripts/tickmanager.gd"
-Gamemanager="*res://Scripts/gamemanager.gd"
+Signalbus="*res://Scripts/signal_bus.gd"
+Tickmanager="*res://Scripts/tick_manager.gd"
+Gamemanager="*res://Scripts/game_manager.gd"
+PurchaseManager="*res://Scripts/purchase_manager.gd"
 
 [rendering]
 

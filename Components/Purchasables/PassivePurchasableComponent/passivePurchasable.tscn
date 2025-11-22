@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://crm8cuudhau44"]
+
+[ext_resource type="Script" uid="uid://3axp86vqg4f4" path="res://Components/Purchasables/PassivePurchasableComponent/passive_purchasable.gd" id="1_t8ov3"]
+
+[node name="PassivePurchasable" type="Node"]
+script = ExtResource("1_t8ov3")

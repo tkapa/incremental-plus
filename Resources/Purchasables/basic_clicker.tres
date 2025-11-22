@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Passive" load_steps=2 format=3 uid="uid://cx6n20pk8k5ag"]
+
+[ext_resource type="Script" uid="uid://cfuts1mwo2dho" path="res://Resources/passive.gd" id="1_747m3"]
+
+[resource]
+script = ExtResource("1_747m3")
+point_value = 1
+name = "Easy Click"
+description = "Description for Easy Click"
+rarity = -1
+base_cost = 10
+cost_increment = 1.1
+metadata/_custom_type_script = "uid://cfuts1mwo2dho"
