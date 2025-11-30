@@ -16,8 +16,10 @@ script = ExtResource("1_thuy6")
 
 [node name="Points" type="Label" parent="."]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Points:"
 
 [node name="PointsTotal" type="Label" parent="."]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "0"

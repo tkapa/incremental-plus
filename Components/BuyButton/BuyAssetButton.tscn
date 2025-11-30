@@ -5,6 +5,7 @@
 [node name="BuyAssetButton" type="Button"]
 offset_right = 8.0
 offset_bottom = 8.0
+text = "Buy {{ PURCHASABLE }}: {{ COST }}"
 script = ExtResource("1_7ghck")
 metadata/_custom_type_script = "uid://cc34d36477p4m"
 

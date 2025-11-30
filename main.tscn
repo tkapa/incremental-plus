@@ -40,6 +40,6 @@ script = ExtResource("2_0xm2m")
 
 [node name="BuyAssetButton" parent="Panel/MarginContainer/VBoxContainer" instance=ExtResource("3_h2yge")]
 layout_mode = 2
-puchasable = ExtResource("4_1bvp3")
+purchasable = ExtResource("4_1bvp3")
 
 [connection signal="button_down" from="Panel/MarginContainer/VBoxContainer/AddPointButton" to="Panel/MarginContainer/VBoxContainer/AddPointButton" method="_on_button_down"]

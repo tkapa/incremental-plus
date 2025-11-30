@@ -1,13 +1,13 @@
 class_name BuyButton extends Button
 
-@export var puchasable : Purchasable
+@export var purchasable : Purchasable
 
 var current_asset_cost : int
 
 func _ready():
 	Signalbus.points_added.connect(_on_points_changed)
-	current_asset_cost = puchasable.base_cost
-	text = "Buy " + puchasable.name 
+	current_asset_cost = purchasable.base_cost
+	_set_text()
 	
 	if (!_is_purchasable()):
 		disabled = true
@@ -28,5 +28,9 @@ func _on_points_changed(new_value: int):
 	disabled = false
 
 func _handle_purchase():
-	Signalbus.handle_purchase.emit(puchasable, current_asset_cost)
-	current_asset_cost *= puchasable.cost_increment
+	Signalbus.handle_purchase.emit(purchasable, current_asset_cost)
+	current_asset_cost *= purchasable.cost_increment
+	_set_text()
+
+func _set_text():
+	text = "Buy " + purchasable.name + ": " + str(current_asset_cost)
